@@ -6,18 +6,16 @@
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello WOrlds</title>
+    <title>{{ title }}</title>
 
     <!-- <link rel="stylesheet" href="/clix/customs/JSLibrary/ians-core-3.min.css" /> -->
 
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    
-  <h1>This is the index page!!</h1>
-
+    {% block content %} {% endblock %}
     <!-- <script src="/clix/customs/JSLibrary/ians-tz-elearning-customs-3.min.js"></script> -->
-<footer>This is yer footer!</footer>
+{% include "partials/_footer.njk" %}
     <script src="scripts/main.js"></script>
   </body>
 </html>

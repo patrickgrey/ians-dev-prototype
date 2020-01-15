@@ -14,6 +14,7 @@ const autoprefixer = require("autoprefixer");
 const sass = require("gulp-sass");
 const rename = require("gulp-rename");
 const zip = require("gulp-zip");
+const nunjucksRender = require("gulp-nunjucks-render");
 
 const source = "app";
 const publish = "dist";
@@ -68,9 +69,24 @@ gulp.task("compileStyles", callback => {
   callback();
 });
 
+gulp.task("nunjucks", callback => {
+  var folders = getFolders(source);
+  var tasks = folders.map(function(folder) {
+    return gulp
+      .src(`${source}/${folder}/template/*.njk`)
+      .pipe(
+        nunjucksRender({
+          path: [`${source}/${folder}/template/`]
+        })
+      )
+      .pipe(gulp.dest(`${source}/${folder}/`));
+  });
+  callback();
+});
+
 gulp.task("browserSync", () => {
   server = browserSync.init({
-    // open: false,
+    open: false,
     notify: false,
     port: 9000,
     server: {
@@ -80,11 +96,12 @@ gulp.task("browserSync", () => {
       }
     }
   });
+  gulp.watch(`${source}/**/*.njk`, gulp.series("nunjucks"));
   gulp.watch(`${source}/**/*.scss`, gulp.series("compileStyles"));
   gulp.watch(formats).on("change", browserSync.reload);
 });
 
-gulp.task("serve", series("compileStyles", "browserSync"));
+gulp.task("serve", series("compileStyles", "nunjucks", "browserSync"));
 
 ///////////////////////////////
 // BUILD
