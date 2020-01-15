@@ -1,0 +1,331 @@
+/*!
+  * ians-core-1.0.0.css
+  * Repository: https://github.com/EUROCONTROL-IANS/_documenation
+  *
+  * The major version number should be updated only in case of a major overhall
+  * that may break existing layouts or may have unintended consequences for
+  * content already using this file.
+  *
+  * This is the core IANS style sheet. It is the basis of the style guide.
+  * It is built upon a custom download of documented parts of the foundation
+  * website framework.
+  *
+  * The custom foundation style sheet should be loaded before this stylesheet.
+  *
+  * In each template page you should inlcude both stylesheets:
+  *
+  * <link rel="stylesheet" href="XXXXXXX/styles/ians-foundation-1.0.0.css" />
+  * <link rel="stylesheet" href="XXXXXXX/styles/ians-core-1.0.0.css" />
+  *
+  *If you have any questions: trainingzone.support@eurocontrol.int  
+*/
+.row {
+  background-color: #fff;
+}
+code {
+  background-color: none;
+  border: 0;
+}
+@media screen and (min-width: 64.063em) {
+  .ians-row-narrow {
+    padding: 0 11.5rem;
+  }
+}
+@media screen and (min-width: 59em) and (max-width: 64.0629999em) {
+  .ians-row-narrow {
+    padding: 0 8rem;
+  }
+}
+@media screen and (min-width: 50em) and (max-width: 58.999999em) {
+  .ians-row-narrow {
+    padding: 0 4rem;
+  }
+}
+.ians-footer {
+  border-top: 2rem solid #fff;
+  padding-top: 1.2rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  color: #fff;
+  background-color: #036;
+}
+@media screen and (min-width: 64.063em) {
+  .ians-header {
+    margin-top: 2rem;
+  }
+  .ians-footer {
+    margin-bottom: 2rem;
+  }
+}
+.ians-row-space-below {
+  padding-bottom: 2rem;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html {
+  font-family: FrutigerLT, Segoe UI, Arial, sans-serif;
+}
+body,
+html {
+  color: #000;
+  background-color: #eee;
+  line-height: 1.2em;
+}
+h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+h1,
+h3 {
+  color: #036;
+}
+h2,
+h4 {
+  color: #39c;
+}
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0 1rem;
+  border-bottom: 1rem solid #39c;
+}
+h2.ians-h2-alt-1 {
+  color: #fff;
+  background-color: #39c;
+  padding: 0.5rem 0 1rem 1rem;
+  border-bottom: 0;
+  border-top: 2.5rem solid;
+}
+h2.ians-h2-alt-2 {
+  border-bottom: 0;
+  padding: 0.5rem 0 0;
+}
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.45rem;
+}
+@media screen and (min-width: 40em) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.9375rem;
+  }
+}
+p {
+  line-height: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+a,
+code {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+a,
+a:focus {
+  color: #39c;
+  text-decoration: underline;
+}
+a:active,
+a:hover {
+  color: #39c;
+  text-decoration: none;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: "“";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+ol,
+ul {
+  margin-top: -0.3rem;
+}
+.ians-text-subtle {
+  color: #999;
+}
+.ians-text-correct {
+  color: #9c0;
+  font-weight: 700;
+}
+.ians-text-wrong {
+  color: #c03;
+  font-weight: 700;
+}
+.ians-text-instruction {
+  color: #f93;
+  font-weight: 700;
+}
+.ians-text-small {
+  font-size: 0.75rem;
+}
+.ians-text-normal-colour {
+  color: #222;
+}
+.button.ians-primary,
+.ians-primary {
+  background-color: #036;
+}
+.button.ians-secondary,
+.ians-secondary {
+  background-color: #39c;
+}
+.button.ians-alert,
+.ians-alert {
+  background-color: #c03;
+}
+.button.ians-success,
+.ians-success {
+  background-color: #9c0;
+}
+.button.ians-warning,
+.ians-warning {
+  background-color: #f93;
+}
+.ians-colour-yellow {
+  background-color: #fc0;
+}
+.ians-colour-burgandy {
+  background-color: #600;
+}
+.button {
+  border-radius: 6px;
+  background-color: #fc0;
+  color: #000;
+}
+.button:focus,
+.button:hover {
+  background-color: #fd4;
+  color: #000;
+}
+.button:active {
+  background-color: #fc0;
+}
+.button.ians-button-disabled,
+.button[disabled]:hover,
+button[disabled]:hover {
+  opacity: 0.45;
+  background-color: #fc0;
+  color: #000;
+}
+.ians-non-preferred {
+  background-color: rgba(255, 204, 0, 0.5);
+}
+.ians-non-preferred:hover {
+  background-color: rgba(255, 204, 0, 0.3);
+}
+.ians-non-preferred:active {
+  background-color: #fc0;
+}
+.ians-video-container {
+  position: relative;
+  padding-bottom: 56%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.ians-video-container-4_3 {
+  padding-bottom: 75%;
+}
+.ians-video-container embed,
+.ians-video-container iframe,
+.ians-video-container object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure {
+  margin: 1rem;
+}
+figcaption {
+  margin: 1rem 0 2rem;
+  text-align: center;
+  color: #999;
+}
+.ians-image-border-dark {
+  border: 1px solid #222;
+}
+.ians-image-border-medium {
+  border: 1px solid #ccc;
+}
+.ians-image-border-light {
+  border: 1px solid #fff;
+}
+.ians-image-photo-effect {
+  width: calc(100% - 30px);
+  margin: 0 auto 15px;
+  display: block;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 0 10px #fff, 0 0 0 11px #ccc;
+}
+@media screen and (min-width: 40em) {
+  .ians-image-photo-effect {
+    width: calc(100% - 40px);
+    margin: 0 auto 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 0 20px #fff, 0 0 0 21px #ccc;
+  }
+}
+.ians-sb-link-contents {
+  margin-top: 2.5rem;
+  margin-right: 1rem;
+}
+.ians-list-link-block {
+  margin: 0 0 1rem;
+  list-style-type: none;
+  border: 2px solid #fff;
+  border-bottom: 0;
+}
+.ians-list-link-block a {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: #eee;
+  border-bottom: 2px solid #fff;
+  -webkit-transition: background-color 0.2s ease-out 50ms;
+  transition: background-color 0.2s ease-out 50ms;
+}
+.ians-list-link-block a:hover {
+  background: #fff;
+}
+.ians-placeholder {
+  padding-left: 1rem;
+  font-size: 4rem;
+  font-weight: 700;
+  background-color: #999;
+  color: #ccc;
+}
+
+html, body {
+  font-size: 20px;
+  background-color: #fff;
+}

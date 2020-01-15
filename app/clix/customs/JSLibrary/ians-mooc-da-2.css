@@ -1,0 +1,313 @@
+/* 
+ * IANS MOOC direct access CSS
+ * version 2.1.0
+ */
+
+#mooc-top-bar {
+  background-color: #003366;
+  width: 100%;  
+}
+
+.mooc-nav {
+  margin: 0;
+  padding: .75rem 2.5rem;
+}
+
+#link-syllabus {
+  position: relative;
+  left: -12.5rem;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+#link-syllabus:hover {
+  text-decoration: underline;
+}
+
+#link-frontpage span {
+  visibility: hidden;
+}
+
+.mooc-header {
+  background-color: white;
+}
+
+.mooc-header-wrapper {
+  display: table;
+  table-layout: fixed;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 66rem;
+}
+
+.mooc-header-wrapper .mooc-image {
+  display: table-cell;
+  width: 25%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 120px;
+}
+
+.mooc-header-wrapper .mooc-title {
+  display: table-cell;
+  width: 75%;
+  vertical-align: middle;
+  padding-left: 2rem;
+}
+
+.mooc-header-wrapper .mooc-title h1 {
+  margin: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .mooc-header-wrapper .mooc-title h1 {
+    font-size: 2rem;
+  }  
+}
+
+/* Syllabus */
+.mooc-syllabus {
+  display: block;
+  list-style-type: none;
+  max-width: 66rem;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+}
+
+.mooc-syllabus li {
+  display: block;
+  list-style-type: none;
+}
+
+/* Items */
+.mooc-syllabus a {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 3rem;
+  background-color: white;
+  margin: .5rem 0;
+  text-decoration: none;
+  color: black;
+  transition: all 300ms ease-out;
+}
+
+.mooc-syllabus a:hover {
+  outline: none;
+  border-color: #cdcdcd;
+  box-shadow: 0 0 8px #888;
+} 
+
+.mooc-syllabus a.da-unavailable {
+  cursor: not-allowed;
+}
+
+.mooc-syllabus a.da-unavailable:hover {
+  border: none;
+  box-shadow: none;
+}
+
+.mooc-syllabus a>i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ff9933;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.mooc-syllabus a.da-unavailable>i {
+  background-color: #999999;
+}
+
+.mooc-syllabus a>i:before {
+  display: block;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #ff9933;
+  font-size: 1.5rem;
+  color: white;
+  speak: none;
+  text-transform: none;
+  font-variant: normal;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mooc-syllabus a.da-unavailable>i:before {
+  background-color: #999999;
+}
+
+.mooc-syllabus a>span {
+  display: table-cell;
+  height: 3rem;
+  vertical-align: middle;
+  color: black;
+  padding: 0 .5rem 0 4rem;
+  font-size: 1.125rem;
+  line-height: 1.2rem;
+}
+
+.mooc-syllabus a.da-unavailable>span {
+  cursor: not-allowed;
+}
+
+.mooc-syllabus a.da-unavailable>span:after {
+  font-style: italic;
+  display: block;
+  content: "You need to register to access this item";
+}
+
+/* Folders: level 1 */
+
+.mooc-syllabus h2 {
+  display: block;
+  margin: 1rem 0 0;
+  padding: .25rem 2.75rem .5rem .75rem;
+  border: none;
+  background-color: #3399cc;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mooc-syllabus h2:after {
+  display: block;
+  content: '\e00d';
+  font-family: 'Icons';
+  float: right;
+  position: relative;
+  left: 2rem;
+  padding-top: .5rem;
+  font-size: 1rem;
+}
+
+.mooc-syllabus h2.accordion-closed:after {
+  content: '\e00e';
+}
+
+.mooc-syllabus>li>ul {
+  background-color: white;
+  display: block;
+  margin: 0 0 1rem;
+  padding: .5rem 1rem;
+}
+
+.mooc-syllabus ul li a {
+  background-color: #e8e7e7;
+}
+
+/* Folders: level 2 */
+
+.mooc-syllabus li.folder-l2 {
+  border-bottom: solid 1px #bbbbbb;
+  margin-bottom: 1rem;
+}
+
+.mooc-syllabus h3 {
+  display: block;
+  margin: 1rem 0 0;
+  padding: .25rem 2rem .25rem 0;
+  border: none;
+  color: black;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.mooc-syllabus h3:after {
+  display: block;
+  content: '\e00d';
+  font-family: 'Icons';
+  float: right;
+  position: relative;
+  left: 2rem;
+  padding-top: .5rem;
+  font-size: .75rem;
+}
+
+.mooc-syllabus h3.accordion-closed:after {
+  content: '\e00e';
+}
+
+.mooc-syllabus>li>ul>li>ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Registration button to full course */
+.course-registration {
+  text-align: center;
+  margin: 2rem 1rem 1rem;
+}
+
+.course-registration a {
+  text-decoration: none;
+}
+
+
+/* Icons */
+.icon-content-course:before {
+    content: "\e101";
+    font-family: "Icons"
+}
+.icon-back-up:before {
+    content: "\e001";
+    font-family: "Icons"
+}
+.icon-content-video {
+    background-image: url('icons/video.svg');
+}
+.icon-content-wbt {
+    background-image: url('icons/wbt.svg');
+}
+.icon-content-link {
+    background-image: url('icons/link.svg');
+}
+.icon-content-test {
+    background-image: url('icons/test.svg');
+}
+.icon-document-file {
+    background-image: url('icons/file.svg');
+}
+
+
+/* Mobile view */
+@media only screen and (max-width: 639px) {
+
+  .mooc-header {
+    padding: 0;
+  }
+
+  .mooc-header-wrapper {
+    display: block;
+    border-bottom: solid 1px #ddd;
+    padding: .5rem 1rem;
+  }
+
+  .mooc-header-wrapper .mooc-image {
+    display: none;
+  }
+
+  .mooc-header-wrapper .mooc-title {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .mooc-header-wrapper .mooc-title h1 {
+    font-size: 1.25rem;
+  }
+
+  .mooc-syllabus {
+    margin-top: 1rem;
+  }
+}

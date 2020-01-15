@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <!--
+    CHECKLIST
+
+    * Rename this file including the module code (e.g. ATC-RST_DA.html)
+    * Replace module code in the attribute data-module-code in head
+    * If it is a trailer change the value of the attribute data-access-type in head to "trailer"
+    * If the values for data-course-mode and data-course-provider need to be different set the correct ones
+    * Set the appropriate title
+    * Rename syllabus.html including the module code (e.g. ATC-RST_syllabus.html)
+    * Update the links to syllabus.html in the top bar and the iframe
+    * Set up the syllabus following its checklist
+  -->
+
+  <head
+    data-module-code="TEST-MOOC-DA"
+    data-access-type="nolms"
+    data-course-mode="e-Learning Course"
+    data-course-provider="TRG"
+  >
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IANS-MOOC-DA-TEMPLATE</title>
+
+    <link
+      rel="stylesheet"
+      href="/clix/customs/JSLibrary/ians-foundation-6.4.1.min.css"
+    />
+    <link rel="stylesheet" href="/clix/customs/JSLibrary/ians-core-2.min.css" />
+    <link rel="stylesheet" href="/ilp/resources/design/css/fonts.css" />
+    <link rel="stylesheet" href="/clix/customs/JSLibrary/ians-mooc-da-2.css" />
+  </head>
+
+  <body>
+    <div id="mooc-top-bar">
+      <div class="mooc-nav">
+        <a
+          target="content-iframe"
+          href="syllabus.html"
+          id="link-syllabus"
+          name="link-syllabus"
+          title="Back to syllabus"
+        >
+          <span class="icon-back-up"> </span>Back to Syllabus
+        </a>
+      </div>
+    </div>
+
+    <iframe
+      id="content-iframe"
+      name="content-iframe"
+      src="syllabus.html"
+      frameborder="0"
+      seamless
+      allowfullscreen
+    ></iframe>
+
+    <!-- IANS Libraries -->
+    <script src="/clix/customs/JSLibrary/jquery-3.3.1.min.js"></script>
+    <!-- <script src="/clix/customs/JSLibrary/what-input.min.js"></script> -->
+    <!--
+      <script src="/clix/customs/JSLibrary/ians-foundation-6.4.1.min.js"></script>
+    -->
+    <script src="/clix/customs/JSLibrary/ians-core-2.min.js"></script>
+    <script src="/clix/customs/JSLibrary/CF07_IANSanalytics.min.js"></script>
+    <script src="/clix/customs/JSLibrary/ians-mooc-da-2.js"></script>
+  </body>
+</html>

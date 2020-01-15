@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Syllabus</title>
+
+    <link
+      rel="stylesheet"
+      href="/clix/customs/JSLibrary/ians-foundation-6.4.1.min.css"
+    />
+    <link rel="stylesheet" href="/clix/customs/JSLibrary/ians-core-2.min.css" />
+    <link rel="stylesheet" href="/ilp/resources/design/css/fonts.css" />
+    <link rel="stylesheet" href="/clix/customs/JSLibrary/ians-mooc-da-2.css" />
+  </head>
+
+  <body>
+    <!--
+      CONTENT CHECKLIST
+
+      * Replace the title in the h1 element in the header
+      * Replace the image in the header with the appropriate one (the one used in ILP)
+      * Build the structure of the syllabus following the pattern in the example below
+      * Set the correct URL and icon for each media item (see examples of URLs and icons in Media Types section)
+      * If a register button is required (this is a trailer for a full course or there is a logged-in version of the course that allows the student get a certificate), replace the url in the buttons at the beginning and end of the document with the right code, and update the text of the buttons if required
+      * If the syllabus is long, the div containing the register button can be copied above the syllabus
+      * If the register button is not required, remove the sections containing that button
+    -->
+
+    <!-- Header -->
+    <div class="mooc-header">
+      <div class="mooc-header-wrapper">
+        <div
+          class="mooc-image"
+          style="background-image: url(https://trainingzone.eurocontrol.int/ilp/data/client_design/EUROCONTROL/ila/1.6.7.3/design/images/course_description_image_default.png)"
+        ></div>
+        <div class="mooc-title"><h1>Course/Module title</h1></div>
+      </div>
+    </div>
+
+    <!-- Registration button - remove if not necessary -->
+    <div class="course-registration">
+      <!-- set the correct module code at the end of the URL below -->
+      <a
+        class="large button"
+        href="/CourseRequest-catalogue.asp?coursecode=CODE"
+        >Register now to get the certificate</a
+      >
+    </div>
+
+    <!-- Syllabus -->
+    <ul class="mooc-syllabus">
+      <li>
+        <a href="placeholder.html">
+          <i class="icon-content-wbt"></i> <span>Top level media item</span>
+        </a>
+      </li>
+      <li>
+        <a href="placeholder.html">
+          <i class="icon-content-video"></i>
+          <span
+            >Top level media item with long title. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Maecenas placerat, enim lacinia dapibus
+            vehicula, urna mi interdum dolor, quis fermentum dui elit nec
+            nisi.</span
+          >
+        </a>
+      </li>
+      <li>
+        <a class="da-unavailable">
+          <i class="icon-content-video"></i>
+          <span>Title for topic not available in direct access</span>
+        </a>
+      </li>
+      <li>
+        <h2>Level 1 folder title</h2>
+        <ul>
+          <li>
+            <a href="placeholder.html">
+              <i class="icon-content-wbt"></i>
+              <span>Media item in a folder</span>
+            </a>
+          </li>
+          <li>
+            <h3>Level 2 folder title</h3>
+            <ul>
+              <li>
+                <a href="placeholder.html">
+                  <i class="icon-content-wbt"></i>
+                  <span>Media item in a level 2 folder</span>
+                </a>
+              </li>
+              <li>
+                <a class="da-unavailable">
+                  <i class="icon-content-wbt"></i>
+                  <span>Media item in a level 2 folder</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="placeholder.html">
+              <i class="icon-content-wbt"></i>
+              <span>Media item in a folder</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2>Media types</h2>
+        <ul>
+          <li>
+            <a href="/clix/data/wbt/decompressed/examples_5229258/index.html">
+              <!--
+                href should have the URL for the main page of the WBT in the decompressed folder, preview the item in clix to get it
+              -->
+              <i class="icon-content-wbt"></i> <span>WBT</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/embed/vDu914Z0r3M?rel=0&showinfo=0"
+            >
+              <!-- href should have the Youtube embed URL -->
+              <i class="icon-content-video"></i> <span>Video</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.skybrary.aero" target="_blank">
+              <i class="icon-content-link"></i> <span>Link</span>
+            </a>
+          </li>
+          <li>
+            <a href="placeholder.html">
+              <i class="icon-content-test"></i> <span>Assessment</span>
+            </a>
+          </li>
+          <li>
+            <a href="placeholder.html">
+              <i class="icon-document-file"></i> <span>File</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="placeholder.html">
+          <i class="icon-content-wbt"></i> <span>Top level media item</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Registration button - remove if not necessary -->
+    <div class="course-registration">
+      <!-- set the correct module code at the end of the URL below -->
+      <a
+        class="large button"
+        href="/CourseRequest-catalogue.asp?coursecode=CODE"
+        >Register now to get the certificate</a
+      >
+    </div>
+
+    <!-- IANS Libraries -->
+    <script src="/clix/customs/JSLibrary/jquery-3.3.1.min.js"></script>
+    <script src="/clix/customs/JSLibrary/ians-core-3.min.js"></script>
+    <script src="/clix/customs/JSLibrary/ians-tz-elearning-customs-2.js"></script>
+    <script src="/clix/customs/JSLibrary/ians-mooc-da-2.js"></script>
+  </body>
+</html>

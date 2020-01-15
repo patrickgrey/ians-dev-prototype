@@ -1,0 +1,19 @@
+@import "susy";
+
+.float {
+  width: span(3);
+  margin-right: gutter();
+}
+
+.flexbox {
+  flex: 1 1 span(3);
+  padding: 0 gutter() / 2;
+}
+
+.push-3 {
+  margin-left: span(3 wide);
+}
+
+h1 {
+  color: green;
+}

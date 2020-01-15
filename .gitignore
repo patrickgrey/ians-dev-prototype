@@ -1,0 +1,12 @@
+node_modules
+.tmp
+dist
+.DS_Store
+*.mp4
+*.wav
+*.mov
+*.avi
+*.zip
+*.mts
+*.hdr
+tests
