@@ -96,12 +96,12 @@ gulp.task("browserSync", () => {
       }
     }
   });
-  gulp.watch(`${source}/**/*.njk`, gulp.series("nunjucks"));
+  // gulp.watch(`${source}/**/*.njk`, gulp.series("nunjucks"));
   gulp.watch(`${source}/**/*.scss`, gulp.series("compileStyles"));
   gulp.watch(formats).on("change", browserSync.reload);
 });
 
-gulp.task("serve", series("compileStyles", "nunjucks", "browserSync"));
+gulp.task("serve", series("compileStyles", "browserSync"));
 
 ///////////////////////////////
 // BUILD
